@@ -8,6 +8,7 @@ def sum_even_digits(number):
 
 def count_vowel_triplets(text):
     vowels = {'a', 'e', 'i', 'o', 'u', 'y'}
+
     count = 0
     text = text.lower()
     for i in range(len(text) - 2):
