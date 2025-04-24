@@ -74,7 +74,9 @@ def dict_to_table(data_dict, columns):
 def deep_update(base_dict, update_dict):
     result = base_dict.copy()
     for key, value in update_dict.items():
-        if key in result and isinstance(result[key], dict) and isinstance(value, dict):
+        if (key in result
+            and isinstance(result[key], dict)
+            and isinstance(value, dict)):
             result[key] = deep_update(result[key], value)
         elif key in result:
             result[key] = value
